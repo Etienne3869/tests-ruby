@@ -11,5 +11,13 @@ def repeat(words, n=2)
   end
 
   def start_of_word(letter, n)
-    return letter[n]
+    return letter[0,n]
+  end
+
+  def first_word (word)
+    return word.split.first
+  end
+
+  def titleize(word)
+    return word.split(/ |\_|\-/).map(&:capitalize).join(" ")
   end
